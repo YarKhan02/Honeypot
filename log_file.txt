@@ -1,0 +1,782 @@
+```type=SERVICE_START msg=audit(1746551574.656:9390): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746551574.656:9391): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746551701.441:9392): pid=108326 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746551701.441:9393): pid=108326 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746551701.441:9394): pid=108326 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=267 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746551701.441:9394): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108326 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=267 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746551701.441:9394): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746551701.442:9395): pid=108326 uid=0 auid=0 ses=267 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746551701.444:9396): pid=108327 uid=0 auid=0 ses=267 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746551701.444:9397): arch=c000003e syscall=59 success=yes exit=0 a0=59f0097026a6 a1=7fff01166700 a2=59f009702730 a3=59f0097026a6 items=2 ppid=108326 pid=108327 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=267 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551701.444:9397): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1746551701.444:9397): cwd="/root"
+type=PATH msg=audit(1746551701.444:9397): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551701.444:9397): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551701.444:9397): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+```
+```type=SYSCALL msg=audit(1746551701.445:9398): arch=c000003e syscall=59 success=yes exit=0 a0=59aa6004c538 a1=59aa6004c4e0 a2=59aa6004c500 a3=8 items=3 ppid=108327 pid=108328 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=267 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551701.445:9398): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1746551701.445:9398): cwd="/root"
+type=PATH msg=audit(1746551701.445:9398): item=0 name="/usr/lib/sysstat/debian-sa1" inode=20600 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551701.445:9398): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551701.445:9398): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551701.445:9398): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1746551701.447:9399): pid=108326 uid=0 auid=0 ses=267 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=USER_END msg=audit(1746551701.448:9400): pid=108326 uid=0 auid=0 ses=267 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746551751.291:9401): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108330 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551751.291:9401): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746551751.291:9401): cwd="/"
+type=PATH msg=audit(1746551751.291:9401): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551751.291:9401): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551751.291:9401): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746551751.301:9402): arch=c000003e syscall=59 success=yes exit=0 a0=5c772e719030 a1=5c772e719130 a2=5c772e7189b0 a3=5c772e719990 items=2 ppid=1 pid=108330 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551751.301:9402): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746551751.301:9402): cwd="/"
+type=PATH msg=audit(1746551751.301:9402): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551751.301:9402): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551751.301:9402): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746551753.651:9403): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746551753.651:9404): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746551821.450:9405): pid=108333 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746551821.450:9406): pid=108333 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746551821.450:9407): pid=108333 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=268 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746551821.450:9407): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108333 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=268 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746551821.450:9407): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746551821.451:9408): pid=108333 uid=0 auid=0 ses=268 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746551821.455:9409): pid=108334 uid=0 auid=0 ses=268 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746551821.455:9410): arch=c000003e syscall=59 success=yes exit=0 a0=59f009702686 a1=7fff01166700 a2=59f009702710 a3=59f009702686 items=2 ppid=108333 pid=108334 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=268 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551821.455:9410): argc=3 a0="/bin/sh" a1="-c" a2=6364202F2026262072756E2D7061727473202D2D7265706F7274202F6574632F63726F6E2E686F75726C79
+type=CWD msg=audit(1746551821.455:9410): cwd="/root"
+type=PATH msg=audit(1746551821.455:9410): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551821.455:9410): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551821.455:9410): proctitle=2F62696E2F7368002D63006364202F2026262072756E2D7061727473202D2D7265706F7274202F6574632F63726F6E2E686F75726C79
+```
+```type=SYSCALL msg=audit(1746551821.456:9411): arch=c000003e syscall=59 success=yes exit=0 a0=5947c9a815c0 a1=5947c9a81560 a2=5947c9a81580 a3=8 items=2 ppid=108334 pid=108335 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=268 comm="run-parts" exe="/usr/bin/run-parts" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551821.456:9411): argc=3 a0="run-parts" a1="--report" a2="/etc/cron.hourly"
+type=CWD msg=audit(1746551821.456:9411): cwd="/"
+type=PATH msg=audit(1746551821.456:9411): item=0 name="/usr/bin/run-parts" inode=1797 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551821.456:9411): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551821.456:9411): proctitle=72756E2D7061727473002D2D7265706F7274002F6574632F63726F6E2E686F75726C79
+type=CRED_DISP msg=audit(1746551821.456:9412): pid=108333 uid=0 auid=0 ses=268 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=USER_END msg=audit(1746551821.457:9413): pid=108333 uid=0 auid=0 ses=268 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=SYSCALL msg=audit(1746551873.669:9414): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108336 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551873.669:9414): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746551873.669:9414): cwd="/"
+type=PATH msg=audit(1746551873.669:9414): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551873.669:9414): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551873.669:9414): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746551873.678:9415): arch=c000003e syscall=59 success=yes exit=0 a0=64dabca1b030 a1=64dabca1b130 a2=64dabca1a9b0 a3=64dabca1b990 items=2 ppid=1 pid=108336 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746551873.678:9415): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746551873.678:9415): cwd="/"
+type=PATH msg=audit(1746551873.678:9415): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746551873.678:9415): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746551873.678:9415): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746551877.363:9416): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746551877.363:9417): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552011.734:9418): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108339 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552011.734:9418): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552011.734:9418): cwd="/"
+type=PATH msg=audit(1746552011.734:9418): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.734:9418): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746552011.734:9418): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552011.738:9419): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108340 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552011.738:9419): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="69" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552011.738:9419): cwd="/"
+type=PATH msg=audit(1746552011.738:9419): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.738:9419): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552011.738:9419): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746552011.744:9420): arch=c000003e syscall=59 success=yes exit=0 a0=564e78955030 a1=564e78955130 a2=564e789549b0 a3=564e78955990 items=2 ppid=1 pid=108339 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552011.744:9420): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552011.744:9420): cwd="/"
+type=PATH msg=audit(1746552011.744:9420): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.744:9420): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552011.744:9420): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552011.752:9421): arch=c000003e syscall=59 success=yes exit=0 a0=5bed1e6550a0 a1=5bed1e6551a0 a2=5bed1e6544b0 a3=5bed1e655990 items=3 ppid=1 pid=108340 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+```
+```type=EXECVE msg=audit(1746552011.752:9421): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/sa1" a2="1" a3="1"
+type=CWD msg=audit(1746552011.752:9421): cwd="/"
+type=PATH msg=audit(1746552011.752:9421): item=0 name="/usr/lib/sysstat/sa1" inode=20601 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.752:9421): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.752:9421): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552011.752:9421): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552011.754:9422): arch=c000003e syscall=59 success=yes exit=0 a0=63c7fc8fb148 a1=63c7fc8fb228 a2=63c7fc8fb270 a3=0 items=2 ppid=1 pid=108340 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sadc" exe="/usr/lib/sysstat/sadc" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552011.754:9422): argc=8 a0="/usr/lib/sysstat/sadc" a1="-F" a2="-L" a3="-S" a4="DISK" a5="1" a6="1" a7="/var/log/sysstat"
+type=CWD msg=audit(1746552011.754:9422): cwd="/usr/lib/sysstat"
+```
+```type=PATH msg=audit(1746552011.754:9422): item=0 name="/usr/lib/sysstat/sadc" inode=20603 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552011.754:9422): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552011.754:9422): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SERVICE_START msg=audit(1746552011.762:9423): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552011.764:9424): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+```
+```type=SERVICE_START msg=audit(1746552014.071:9425): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552014.073:9426): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552173.668:9427): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108345 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552173.668:9427): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552173.668:9427): cwd="/"
+type=PATH msg=audit(1746552173.668:9427): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552173.668:9427): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746552173.668:9427): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552173.678:9428): arch=c000003e syscall=59 success=yes exit=0 a0=5b3da16e2030 a1=5b3da16e2130 a2=5b3da16e19b0 a3=5b3da16e2990 items=2 ppid=1 pid=108345 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552173.678:9428): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552173.678:9428): cwd="/"
+type=PATH msg=audit(1746552173.678:9428): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552173.678:9428): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552173.678:9428): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552174.726:9429): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552174.726:9430): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746552301.460:9431): pid=108348 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746552301.460:9432): pid=108348 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746552301.460:9433): pid=108348 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=269 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746552301.460:9433): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108348 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=269 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746552301.460:9433): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746552301.461:9434): pid=108348 uid=0 auid=0 ses=269 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746552301.462:9435): pid=108349 uid=0 auid=0 ses=269 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746552301.462:9436): arch=c000003e syscall=59 success=yes exit=0 a0=59f0097026a6 a1=7fff01166700 a2=59f009702730 a3=59f0097026a6 items=2 ppid=108348 pid=108349 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=269 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552301.462:9436): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1746552301.462:9436): cwd="/root"
+type=PATH msg=audit(1746552301.462:9436): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552301.462:9436): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552301.462:9436): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+```
+```type=SYSCALL msg=audit(1746552301.464:9437): arch=c000003e syscall=59 success=yes exit=0 a0=59b3a03b6538 a1=59b3a03b64e0 a2=59b3a03b6500 a3=8 items=3 ppid=108349 pid=108350 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=269 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552301.464:9437): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1746552301.464:9437): cwd="/root"
+type=PATH msg=audit(1746552301.464:9437): item=0 name="/usr/lib/sysstat/debian-sa1" inode=20600 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552301.464:9437): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552301.464:9437): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552301.464:9437): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1746552301.465:9438): pid=108348 uid=0 auid=0 ses=269 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=USER_END msg=audit(1746552301.465:9439): pid=108348 uid=0 auid=0 ses=269 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746552353.669:9440): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108352 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552353.669:9440): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552353.669:9440): cwd="/"
+type=PATH msg=audit(1746552353.669:9440): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552353.669:9440): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552353.669:9440): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746552353.678:9441): arch=c000003e syscall=59 success=yes exit=0 a0=5cdb9374e030 a1=5cdb9374e130 a2=5cdb9374d9b0 a3=5cdb9374e990 items=2 ppid=1 pid=108352 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552353.678:9441): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552353.678:9441): cwd="/"
+type=PATH msg=audit(1746552353.678:9441): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552353.678:9441): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552353.678:9441): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552355.863:9442): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552355.863:9443): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552533.667:9444): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108356 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552533.667:9444): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552533.667:9444): cwd="/"
+type=PATH msg=audit(1746552533.667:9444): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552533.667:9444): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746552533.667:9444): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552533.677:9445): arch=c000003e syscall=59 success=yes exit=0 a0=5b283dc4c030 a1=5b283dc4c130 a2=5b283dc4b9b0 a3=5b283dc4c990 items=2 ppid=1 pid=108356 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552533.677:9445): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552533.677:9445): cwd="/"
+type=PATH msg=audit(1746552533.677:9445): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552533.677:9445): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552533.677:9445): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552534.730:9446): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552534.730:9447): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552611.733:9448): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108358 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552611.733:9448): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552611.733:9448): cwd="/"
+type=PATH msg=audit(1746552611.733:9448): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552611.733:9448): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746552611.733:9448): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552611.742:9449): arch=c000003e syscall=59 success=yes exit=0 a0=6473820cd0a0 a1=6473820cd1a0 a2=6473820cc4b0 a3=6473820cd990 items=3 ppid=1 pid=108358 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552611.742:9449): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/sa1" a2="1" a3="1"
+type=CWD msg=audit(1746552611.742:9449): cwd="/"
+type=PATH msg=audit(1746552611.742:9449): item=0 name="/usr/lib/sysstat/sa1" inode=20601 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552611.742:9449): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552611.742:9449): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552611.742:9449): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746552611.743:9450): arch=c000003e syscall=59 success=yes exit=0 a0=597394584148 a1=597394584228 a2=597394584270 a3=0 items=2 ppid=1 pid=108358 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sadc" exe="/usr/lib/sysstat/sadc" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552611.743:9450): argc=8 a0="/usr/lib/sysstat/sadc" a1="-F" a2="-L" a3="-S" a4="DISK" a5="1" a6="1" a7="/var/log/sysstat"
+type=CWD msg=audit(1746552611.743:9450): cwd="/usr/lib/sysstat"
+type=PATH msg=audit(1746552611.743:9450): item=0 name="/usr/lib/sysstat/sadc" inode=20603 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552611.743:9450): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552611.743:9450): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SERVICE_START msg=audit(1746552611.747:9451): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+```
+```type=SERVICE_STOP msg=audit(1746552611.747:9452): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552686.419:9453): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108361 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552686.419:9453): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552686.419:9453): cwd="/"
+type=PATH msg=audit(1746552686.419:9453): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552686.419:9453): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552686.419:9453): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746552686.428:9454): arch=c000003e syscall=59 success=yes exit=0 a0=5a8a7662e030 a1=5a8a7662e130 a2=5a8a7662d9b0 a3=5a8a7662e990 items=2 ppid=1 pid=108361 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552686.428:9454): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552686.428:9454): cwd="/"
+type=PATH msg=audit(1746552686.428:9454): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552686.428:9454): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552686.428:9454): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552688.859:9455): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552688.859:9456): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746552813.668:9457): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108363 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552813.668:9457): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552813.668:9457): cwd="/"
+type=PATH msg=audit(1746552813.668:9457): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552813.668:9457): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746552813.668:9457): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746552813.677:9458): arch=c000003e syscall=59 success=yes exit=0 a0=5b2eb926a030 a1=5b2eb926a130 a2=5b2eb92699b0 a3=5b2eb926a990 items=2 ppid=1 pid=108363 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552813.677:9458): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552813.677:9458): cwd="/"
+type=PATH msg=audit(1746552813.677:9458): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552813.677:9458): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552813.677:9458): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552814.750:9459): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552814.750:9460): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746552901.468:9461): pid=108367 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746552901.469:9462): pid=108367 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746552901.469:9463): pid=108367 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=270 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746552901.469:9463): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108367 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=270 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746552901.469:9463): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746552901.469:9464): pid=108367 uid=0 auid=0 ses=270 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746552901.470:9465): pid=108368 uid=0 auid=0 ses=270 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746552901.471:9466): arch=c000003e syscall=59 success=yes exit=0 a0=59f0097026a6 a1=7fff01166700 a2=59f009702730 a3=59f0097026a6 items=2 ppid=108367 pid=108368 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=270 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552901.471:9466): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1746552901.471:9466): cwd="/root"
+type=PATH msg=audit(1746552901.471:9466): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552901.471:9466): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552901.471:9466): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+```
+```type=SYSCALL msg=audit(1746552901.471:9467): arch=c000003e syscall=59 success=yes exit=0 a0=5f01cae76538 a1=5f01cae764e0 a2=5f01cae76500 a3=8 items=3 ppid=108368 pid=108369 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=270 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552901.471:9467): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1746552901.471:9467): cwd="/root"
+type=PATH msg=audit(1746552901.471:9467): item=0 name="/usr/lib/sysstat/debian-sa1" inode=20600 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552901.471:9467): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552901.471:9467): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552901.471:9467): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1746552901.473:9468): pid=108367 uid=0 auid=0 ses=270 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=USER_END msg=audit(1746552901.473:9469): pid=108367 uid=0 auid=0 ses=270 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746552943.668:9470): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108370 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552943.668:9470): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746552943.668:9470): cwd="/"
+type=PATH msg=audit(1746552943.668:9470): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552943.668:9470): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552943.668:9470): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746552943.677:9471): arch=c000003e syscall=59 success=yes exit=0 a0=5d0200177030 a1=5d0200177130 a2=5d02001769b0 a3=5d0200177990 items=2 ppid=1 pid=108370 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746552943.677:9471): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746552943.677:9471): cwd="/"
+type=PATH msg=audit(1746552943.677:9471): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746552943.677:9471): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746552943.677:9471): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746552945.899:9472): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746552945.899:9473): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553073.668:9474): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108374 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553073.668:9474): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553073.668:9474): cwd="/"
+type=PATH msg=audit(1746553073.668:9474): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553073.668:9474): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553073.668:9474): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553073.677:9475): arch=c000003e syscall=59 success=yes exit=0 a0=6463e41f6030 a1=6463e41f6130 a2=6463e41f59b0 a3=6463e41f6990 items=2 ppid=1 pid=108374 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553073.677:9475): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553073.677:9475): cwd="/"
+type=PATH msg=audit(1746553073.677:9475): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553073.677:9475): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553073.677:9475): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746553076.219:9476): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553076.219:9477): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553211.733:9478): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108378 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553211.733:9478): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553211.733:9478): cwd="/"
+type=PATH msg=audit(1746553211.733:9478): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.733:9478): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553211.733:9478): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553211.739:9479): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108379 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553211.739:9479): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="69" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553211.739:9479): cwd="/"
+type=PATH msg=audit(1746553211.739:9479): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.739:9479): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553211.739:9479): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553211.745:9480): arch=c000003e syscall=59 success=yes exit=0 a0=5cba7affc030 a1=5cba7affc130 a2=5cba7affb9b0 a3=5cba7affc990 items=2 ppid=1 pid=108378 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553211.745:9480): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553211.745:9480): cwd="/"
+type=PATH msg=audit(1746553211.745:9480): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.745:9480): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553211.745:9480): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553211.748:9481): arch=c000003e syscall=59 success=yes exit=0 a0=6152789800a0 a1=6152789801a0 a2=61527897f4b0 a3=615278980990 items=3 ppid=1 pid=108379 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+```
+```type=EXECVE msg=audit(1746553211.748:9481): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/sa1" a2="1" a3="1"
+type=CWD msg=audit(1746553211.748:9481): cwd="/"
+type=PATH msg=audit(1746553211.748:9481): item=0 name="/usr/lib/sysstat/sa1" inode=20601 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.748:9481): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.748:9481): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553211.748:9481): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553211.752:9482): arch=c000003e syscall=59 success=yes exit=0 a0=5d57c1e38148 a1=5d57c1e38228 a2=5d57c1e38270 a3=0 items=2 ppid=1 pid=108379 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sadc" exe="/usr/lib/sysstat/sadc" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553211.752:9482): argc=8 a0="/usr/lib/sysstat/sadc" a1="-F" a2="-L" a3="-S" a4="DISK" a5="1" a6="1" a7="/var/log/sysstat"
+type=CWD msg=audit(1746553211.752:9482): cwd="/usr/lib/sysstat"
+```
+```type=PATH msg=audit(1746553211.752:9482): item=0 name="/usr/lib/sysstat/sadc" inode=20603 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553211.752:9482): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553211.752:9482): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SERVICE_START msg=audit(1746553211.758:9483): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553211.758:9484): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+```
+```type=SERVICE_START msg=audit(1746553214.927:9485): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553214.927:9486): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553373.667:9487): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108383 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553373.667:9487): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553373.667:9487): cwd="/"
+type=PATH msg=audit(1746553373.667:9487): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553373.667:9487): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553373.667:9487): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553373.676:9488): arch=c000003e syscall=59 success=yes exit=0 a0=64e3c2edb030 a1=64e3c2edb130 a2=64e3c2eda9b0 a3=64e3c2edb990 items=2 ppid=1 pid=108383 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553373.676:9488): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553373.676:9488): cwd="/"
+type=PATH msg=audit(1746553373.676:9488): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553373.676:9488): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553373.676:9488): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746553374.627:9489): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553374.627:9490): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746553501.479:9491): pid=108385 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746553501.479:9492): pid=108385 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746553501.479:9493): pid=108385 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=271 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746553501.479:9493): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108385 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=271 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746553501.479:9493): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746553501.479:9494): pid=108385 uid=0 auid=0 ses=271 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746553501.481:9495): pid=108386 uid=0 auid=0 ses=271 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746553501.481:9496): arch=c000003e syscall=59 success=yes exit=0 a0=59f0097026a6 a1=7fff01166700 a2=59f009702730 a3=59f0097026a6 items=2 ppid=108385 pid=108386 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=271 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553501.481:9496): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1746553501.481:9496): cwd="/root"
+type=PATH msg=audit(1746553501.481:9496): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553501.481:9496): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553501.481:9496): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+```
+```type=SYSCALL msg=audit(1746553501.483:9497): arch=c000003e syscall=59 success=yes exit=0 a0=6144fc65d538 a1=6144fc65d4e0 a2=6144fc65d500 a3=8 items=3 ppid=108386 pid=108387 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=271 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553501.483:9497): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1746553501.483:9497): cwd="/root"
+type=PATH msg=audit(1746553501.483:9497): item=0 name="/usr/lib/sysstat/debian-sa1" inode=20600 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553501.483:9497): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553501.483:9497): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553501.483:9497): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1746553501.484:9498): pid=108385 uid=0 auid=0 ses=271 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=USER_END msg=audit(1746553501.484:9499): pid=108385 uid=0 auid=0 ses=271 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746553550.650:9500): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108388 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553550.650:9500): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553550.650:9500): cwd="/"
+type=PATH msg=audit(1746553550.650:9500): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553550.650:9500): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553550.650:9500): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553550.660:9501): arch=c000003e syscall=59 success=yes exit=0 a0=59a57d096030 a1=59a57d096130 a2=59a57d0959b0 a3=59a57d096990 items=2 ppid=1 pid=108388 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553550.660:9501): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553550.660:9501): cwd="/"
+type=PATH msg=audit(1746553550.660:9501): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553550.660:9501): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553550.660:9501): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746553553.008:9502): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553553.008:9503): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553673.667:9504): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108392 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553673.667:9504): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553673.667:9504): cwd="/"
+type=PATH msg=audit(1746553673.667:9504): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553673.667:9504): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553673.667:9504): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553673.674:9505): arch=c000003e syscall=59 success=yes exit=0 a0=5e8f5291e030 a1=5e8f5291e130 a2=5e8f5291d9b0 a3=5e8f5291e990 items=2 ppid=1 pid=108392 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553673.674:9505): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553673.674:9505): cwd="/"
+type=PATH msg=audit(1746553673.674:9505): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553673.674:9505): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553673.674:9505): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746553674.768:9506): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553674.768:9507): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553786.957:9508): arch=c000003e syscall=59 success=yes exit=0 a0=55ea6c919b60 a1=55ea6c8fe830 a2=55ea6c817640 a3=55ea6c919bf0 items=2 ppid=108279 pid=108395 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts3 ses=265 comm="su" exe="/usr/bin/su" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553786.957:9508): argc=3 a0="su" a1="-" a2="guest"
+type=CWD msg=audit(1746553786.957:9508): cwd="/root"
+type=PATH msg=audit(1746553786.957:9508): item=0 name="/usr/bin/su" inode=1941 dev=ca:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.957:9508): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.957:9508): proctitle=7375002D006775657374
+type=USER_AUTH msg=audit(1746553786.965:9509): pid=108395 uid=0 auid=1000 ses=265 subj=unconfined msg='op=PAM:authentication grantors=pam_rootok acct="guest" exe="/usr/bin/su" hostname=? addr=? terminal=/dev/pts/3 res=success'UID="root" AUID="ubuntu"
+```
+```type=USER_ACCT msg=audit(1746553786.965:9510): pid=108395 uid=0 auid=1000 ses=265 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="guest" exe="/usr/bin/su" hostname=? addr=? terminal=/dev/pts/3 res=success'UID="root" AUID="ubuntu"
+type=CRED_ACQ msg=audit(1746553786.966:9511): pid=108395 uid=0 auid=1000 ses=265 subj=unconfined msg='op=PAM:setcred grantors=pam_rootok acct="guest" exe="/usr/bin/su" hostname=? addr=? terminal=/dev/pts/3 res=success'UID="root" AUID="ubuntu"
+type=USER_START msg=audit(1746553786.968:9512): pid=108395 uid=0 auid=1000 ses=265 subj=unconfined msg='op=PAM:session_open grantors=pam_keyinit,pam_env,pam_env,pam_mail,pam_limits,pam_permit,pam_umask,pam_unix,pam_systemd acct="guest" exe="/usr/bin/su" hostname=? addr=? terminal=/dev/pts/3 res=success'UID="root" AUID="ubuntu"
+type=SYSCALL msg=audit(1746553786.970:9513): arch=c000003e syscall=59 success=yes exit=0 a0=5c482e8d2620 a1=5c482e8c5870 a2=5c482e8db520 a3=5c482e8c56a0 items=2 ppid=108395 pid=108396 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="bash" exe="/usr/bin/bash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.970:9513): argc=1 a0="-bash"
+type=CWD msg=audit(1746553786.970:9513): cwd="/home/guest"
+type=PATH msg=audit(1746553786.970:9513): item=0 name="/bin/bash" inode=1810 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PATH msg=audit(1746553786.970:9513): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.970:9513): proctitle="-bash"
+type=SYSCALL msg=audit(1746553786.975:9514): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89402120 a1=5cbf89403160 a2=5cbf89403f20 a3=1 items=2 ppid=108396 pid=108397 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="groups" exe="/usr/bin/groups" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.975:9514): argc=1 a0="groups"
+type=CWD msg=audit(1746553786.975:9514): cwd="/home/guest"
+type=PATH msg=audit(1746553786.975:9514): item=0 name="/usr/bin/groups" inode=1969 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.975:9514): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.975:9514): proctitle="groups"
+```
+```type=SYSCALL msg=audit(1746553786.977:9515): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894020f0 a1=5cbf89401a10 a2=5cbf89401c80 a3=8 items=2 ppid=108396 pid=108398 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="locale-check" exe="/usr/bin/locale-check" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.977:9515): argc=2 a0="/usr/bin/locale-check" a1="C.UTF-8"
+type=CWD msg=audit(1746553786.977:9515): cwd="/home/guest"
+type=PATH msg=audit(1746553786.977:9515): item=0 name="/usr/bin/locale-check" inode=1849 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.977:9515): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.977:9515): proctitle=2F7573722F62696E2F6C6F63616C652D636865636B00432E5554462D38
+type=SYSCALL msg=audit(1746553786.978:9516): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf8940a0f0 a1=5cbf89405e70 a2=5cbf89401c80 a3=8 items=2 ppid=108396 pid=108399 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="locale" exe="/usr/bin/locale" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.978:9516): argc=1 a0="locale"
+type=CWD msg=audit(1746553786.978:9516): cwd="/home/guest"
+```
+```type=PATH msg=audit(1746553786.978:9516): item=0 name="/usr/bin/locale" inode=5210 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.978:9516): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.978:9516): proctitle="locale"
+type=SYSCALL msg=audit(1746553786.991:9517): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894ffb80 a1=5cbf89509130 a2=5cbf894ff650 a3=5cbf895091e0 items=3 ppid=108396 pid=108401 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="lesspipe" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.991:9517): argc=2 a0="/bin/sh" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1746553786.991:9517): cwd="/home/guest"
+type=PATH msg=audit(1746553786.991:9517): item=0 name="/usr/bin/lesspipe" inode=1855 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.991:9517): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.991:9517): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553786.991:9517): proctitle=2F62696E2F7368002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1746553786.993:9518): arch=c000003e syscall=59 success=yes exit=0 a0=5a04e6c81768 a1=5a04b06f0600 a2=5a04b06f0618 a3=1 items=2 ppid=108401 pid=108402 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="basename" exe="/usr/bin/basename" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.993:9518): argc=2 a0="basename" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1746553786.993:9518): cwd="/home/guest"
+type=PATH msg=audit(1746553786.993:9518): item=0 name="/usr/bin/basename" inode=1774 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.993:9518): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.993:9518): proctitle=626173656E616D65002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1746553786.994:9519): arch=c000003e syscall=59 success=yes exit=0 a0=5a04e6c8d758 a1=5a04e6c8d6d0 a2=5a04e6c8d6e8 a3=1 items=2 ppid=108403 pid=108404 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="dirname" exe="/usr/bin/dirname" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+```
+```type=EXECVE msg=audit(1746553786.994:9519): argc=2 a0="dirname" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1746553786.994:9519): cwd="/home/guest"
+type=PATH msg=audit(1746553786.994:9519): item=0 name="/usr/bin/dirname" inode=1959 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.994:9519): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553786.994:9519): proctitle=6469726E616D65002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1746553786.996:9520): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf895091d0 a1=5cbf894ff840 a2=5cbf894ed900 a3=5cbf894ffb20 items=2 ppid=108396 pid=108405 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="dircolors" exe="/usr/bin/dircolors" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553786.996:9520): argc=2 a0="dircolors" a1="-b"
+type=CWD msg=audit(1746553786.996:9520): cwd="/home/guest"
+type=PATH msg=audit(1746553786.996:9520): item=0 name="/usr/bin/dircolors" inode=1958 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553786.996:9520): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553786.996:9520): proctitle=646972636F6C6F7273002D62
+type=SYSCALL msg=audit(1746553787.005:9521): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894a4b90 a1=5cbf89497ce0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108406 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553787.005:9521): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553787.005:9521): cwd="/home/guest"
+type=PATH msg=audit(1746553787.005:9521): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553787.005:9521): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553787.005:9521): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553788.433:9522): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89412020 a1=5cbf894dcdb0 a2=5cbf894ed900 a3=1 items=2 ppid=108396 pid=108407 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="ls" exe="/usr/bin/ls" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553788.433:9522): argc=2 a0="ls" a1="--color=auto"
+```
+```type=CWD msg=audit(1746553788.433:9522): cwd="/home/guest"
+type=PATH msg=audit(1746553788.433:9522): item=0 name="/usr/bin/ls" inode=1978 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553788.433:9522): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553788.433:9522): proctitle=6C73002D2D636F6C6F723D6175746F
+type=SYSCALL msg=audit(1746553788.436:9523): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894dd2a0 a1=5cbf894de060 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108408 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553788.436:9523): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553788.436:9523): cwd="/home/guest"
+type=PATH msg=audit(1746553788.436:9523): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553788.436:9523): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553788.436:9523): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553789.160:9524): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89474da0 a1=5cbf89483860 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108409 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553789.160:9524): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553789.160:9524): cwd="/home/guest"
+type=PATH msg=audit(1746553789.160:9524): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553789.160:9524): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553789.160:9524): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553793.758:9525): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894ed440 a1=5cbf8949bf90 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108410 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553793.758:9525): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553793.758:9525): cwd="/home/guest/ftp"
+```
+```type=PATH msg=audit(1746553793.758:9525): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553793.758:9525): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553793.758:9525): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553794.725:9526): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89475ff0 a1=5cbf894139f0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108411 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553794.725:9526): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553794.725:9526): cwd="/home/guest/ftp"
+type=PATH msg=audit(1746553794.725:9526): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553794.725:9526): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553794.725:9526): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553795.922:9527): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf893ff4a0 a1=5cbf894da760 a2=5cbf894ed900 a3=5cbf894da760 items=2 ppid=108396 pid=108412 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="ls" exe="/usr/bin/ls" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553795.922:9527): argc=2 a0="ls" a1="--color=auto"
+type=CWD msg=audit(1746553795.922:9527): cwd="/home/guest/ftp"
+type=PATH msg=audit(1746553795.922:9527): item=0 name="/usr/bin/ls" inode=1978 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553795.922:9527): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553795.922:9527): proctitle=6C73002D2D636F6C6F723D6175746F
+type=SYSCALL msg=audit(1746553795.925:9528): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894f4b80 a1=5cbf8949bf90 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108413 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553795.925:9528): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553795.925:9528): cwd="/home/guest/ftp"
+```
+```type=PATH msg=audit(1746553795.925:9528): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553795.925:9528): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553795.925:9528): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553799.581:9529): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89401ae0 a1=5cbf8949bf90 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108416 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553799.581:9529): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553799.581:9529): cwd="/home/guest/ftp"
+type=PATH msg=audit(1746553799.581:9529): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553799.581:9529): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553799.581:9529): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553801.045:9530): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89507310 a1=5cbf89501190 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108417 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553801.045:9530): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553801.045:9530): cwd="/home/guest/ftp/files"
+type=PATH msg=audit(1746553801.045:9530): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553801.045:9530): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553801.045:9530): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553801.737:9531): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89503150 a1=5cbf894d5e30 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108418 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553801.737:9531): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+```
+```type=CWD msg=audit(1746553801.737:9531): cwd="/home/guest/ftp/files"
+type=PATH msg=audit(1746553801.737:9531): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553801.737:9531): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553801.737:9531): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553802.554:9532): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89475ff0 a1=5cbf8948a1e0 a2=5cbf894ed900 a3=5cbf8948a1e0 items=2 ppid=108396 pid=108419 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="ls" exe="/usr/bin/ls" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553802.554:9532): argc=2 a0="ls" a1="--color=auto"
+type=CWD msg=audit(1746553802.554:9532): cwd="/home/guest/ftp/files"
+type=PATH msg=audit(1746553802.554:9532): item=0 name="/usr/bin/ls" inode=1978 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553802.554:9532): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553802.554:9532): proctitle=6C73002D2D636F6C6F723D6175746F
+```
+```type=SYSCALL msg=audit(1746553802.557:9533): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89414c90 a1=5cbf894e73a0 a2=5cbf894ed900 a3=1 items=2 ppid=108396 pid=108420 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553802.557:9533): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553802.557:9533): cwd="/home/guest/ftp/files"
+type=PATH msg=audit(1746553802.557:9533): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553802.557:9533): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553802.557:9533): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553803.103:9534): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89505f60 a1=5cbf89485750 a2=5cbf894ed900 a3=1 items=2 ppid=108396 pid=108421 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553803.103:9534): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+```
+```type=CWD msg=audit(1746553803.103:9534): cwd="/home/guest/ftp/files"
+type=PATH msg=audit(1746553803.103:9534): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553803.103:9534): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553803.103:9534): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553805.413:9535): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89501960 a1=5cbf893fe540 a2=5cbf894ed900 a3=1 items=2 ppid=108396 pid=108422 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553805.413:9535): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553805.413:9535): cwd="/home/guest/ftp"
+type=PATH msg=audit(1746553805.413:9535): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553805.413:9535): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553805.413:9535): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553807.002:9536): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89501960 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108423 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553807.002:9536): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553807.002:9536): cwd="/home/guest"
+type=PATH msg=audit(1746553807.002:9536): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553807.002:9536): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553807.002:9536): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553808.066:9537): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf895011a0 a1=5cbf89481fe0 a2=5cbf894ed900 a3=5cbf89481fe0 items=2 ppid=108396 pid=108424 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="ls" exe="/usr/bin/ls" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553808.066:9537): argc=2 a0="ls" a1="--color=auto"
+type=CWD msg=audit(1746553808.066:9537): cwd="/home/guest"
+```
+```type=PATH msg=audit(1746553808.066:9537): item=0 name="/usr/bin/ls" inode=1978 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553808.066:9537): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553808.066:9537): proctitle=6C73002D2D636F6C6F723D6175746F
+type=SYSCALL msg=audit(1746553808.068:9538): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89501980 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108425 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553808.068:9538): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553808.068:9538): cwd="/home/guest"
+type=PATH msg=audit(1746553808.068:9538): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553808.068:9538): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553808.068:9538): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553811.733:9539): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108426 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553811.733:9539): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553811.733:9539): cwd="/"
+type=PATH msg=audit(1746553811.733:9539): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.733:9539): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553811.733:9539): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553811.738:9540): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108427 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553811.738:9540): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="69" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553811.738:9540): cwd="/"
+type=PATH msg=audit(1746553811.738:9540): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.738:9540): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553811.738:9540): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553811.741:9541): arch=c000003e syscall=59 success=yes exit=0 a0=5e2419fdb030 a1=5e2419fdb130 a2=5e2419fda9b0 a3=5e2419fdb990 items=2 ppid=1 pid=108426 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553811.741:9541): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553811.741:9541): cwd="/"
+type=PATH msg=audit(1746553811.741:9541): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.741:9541): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553811.741:9541): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553811.750:9542): arch=c000003e syscall=59 success=yes exit=0 a0=563576d0e0a0 a1=563576d0e1a0 a2=563576d0d4b0 a3=563576d0e990 items=3 ppid=1 pid=108427 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+```
+```type=EXECVE msg=audit(1746553811.750:9542): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/sa1" a2="1" a3="1"
+type=CWD msg=audit(1746553811.750:9542): cwd="/"
+type=PATH msg=audit(1746553811.750:9542): item=0 name="/usr/lib/sysstat/sa1" inode=20601 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.750:9542): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.750:9542): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553811.750:9542): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553811.751:9543): arch=c000003e syscall=59 success=yes exit=0 a0=5d564e023148 a1=5d564e023228 a2=5d564e023270 a3=0 items=2 ppid=1 pid=108427 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sadc" exe="/usr/lib/sysstat/sadc" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553811.751:9543): argc=8 a0="/usr/lib/sysstat/sadc" a1="-F" a2="-L" a3="-S" a4="DISK" a5="1" a6="1" a7="/var/log/sysstat"
+type=CWD msg=audit(1746553811.751:9543): cwd="/usr/lib/sysstat"
+```
+```type=PATH msg=audit(1746553811.751:9543): item=0 name="/usr/lib/sysstat/sadc" inode=20603 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553811.751:9543): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553811.751:9543): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003639002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SERVICE_START msg=audit(1746553811.760:9544): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553811.760:9545): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=sysstat-collect comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+```
+```type=SYSCALL msg=audit(1746553816.291:9546): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf8944dfc0 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108429 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553816.291:9546): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553816.291:9546): cwd="/home"
+type=PATH msg=audit(1746553816.291:9546): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553816.291:9546): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553816.291:9546): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553817.363:9547): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf8944dfc0 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108431 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553817.363:9547): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553817.363:9547): cwd="/home"
+```
+```type=PATH msg=audit(1746553817.363:9547): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553817.363:9547): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553817.363:9547): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553817.869:9548): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf894ee650 a1=5cbf893d62d0 a2=5cbf894ed900 a3=5cbf893d62d0 items=2 ppid=108396 pid=108432 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="ls" exe="/usr/bin/ls" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553817.869:9548): argc=2 a0="ls" a1="--color=auto"
+type=CWD msg=audit(1746553817.869:9548): cwd="/home"
+type=PATH msg=audit(1746553817.869:9548): item=0 name="/usr/bin/ls" inode=1978 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553817.869:9548): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553817.869:9548): proctitle=6C73002D2D636F6C6F723D6175746F
+```
+```type=SYSCALL msg=audit(1746553817.872:9549): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89495e70 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108433 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553817.872:9549): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553817.872:9549): cwd="/home"
+type=PATH msg=audit(1746553817.872:9549): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553817.872:9549): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553817.872:9549): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553819.188:9550): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89495e70 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108434 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553819.188:9550): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553819.188:9550): cwd="/home"
+```
+```type=PATH msg=audit(1746553819.188:9550): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553819.188:9550): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553819.188:9550): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SERVICE_START msg=audit(1746553822.904:9551): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553822.904:9552): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553824.299:9553): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89486d80 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108436 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553824.299:9553): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553824.299:9553): cwd="/home"
+```
+```type=PATH msg=audit(1746553824.299:9553): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553824.299:9553): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553824.299:9553): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+type=SYSCALL msg=audit(1746553825.698:9554): arch=c000003e syscall=59 success=yes exit=0 a0=5cbf89486d80 a1=5cbf895087d0 a2=5cbf894ed900 a3=8 items=2 ppid=108396 pid=108437 auid=1000 uid=1002 gid=1002 euid=1002 suid=1002 fsuid=1002 egid=1002 sgid=1002 fsgid=1002 tty=pts3 ses=265 comm="tee" exe="/usr/bin/tee" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="ubuntu" UID="guest" GID="guest" EUID="guest" SUID="guest" FSUID="guest" EGID="guest" SGID="guest" FSGID="guest"
+type=EXECVE msg=audit(1746553825.698:9554): argc=3 a0="tee" a1="-a" a2="/var/log/bash_history.log"
+type=CWD msg=audit(1746553825.698:9554): cwd="/home"
+type=PATH msg=audit(1746553825.698:9554): item=0 name="/usr/bin/tee" inode=2022 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553825.698:9554): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553825.698:9554): proctitle=746565002D61002F7661722F6C6F672F626173685F686973746F72792E6C6F67
+```
+```type=SYSCALL msg=audit(1746553913.667:9555): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108439 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553913.667:9555): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553913.667:9555): cwd="/"
+type=PATH msg=audit(1746553913.667:9555): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553913.667:9555): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553913.667:9555): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553913.686:9556): arch=c000003e syscall=59 success=yes exit=0 a0=63cbaa082fa0 a1=63cbaa07a260 a2=63cbaa076cb0 a3=63cbaa075d70 items=2 ppid=1 pid=108439 auid=4294967295 uid=990 gid=990 euid=990 suid=990 fsuid=990 egid=990 sgid=990 fsgid=990 tty=(none) ses=4294967295 comm="fwupdmgr" exe="/usr/bin/fwupdmgr" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="fwupd-refresh" GID="fwupd-refresh" EUID="fwupd-refresh" SUID="fwupd-refresh" FSUID="fwupd-refresh" EGID="fwupd-refresh" SGID="fwupd-refresh" FSGID="fwupd-refresh"
+type=EXECVE msg=audit(1746553913.686:9556): argc=2 a0="/usr/bin/fwupdmgr" a1="refresh"
+type=CWD msg=audit(1746553913.686:9556): cwd="/"
+type=PATH msg=audit(1746553913.686:9556): item=0 name="/usr/bin/fwupdmgr" inode=2444 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553913.686:9556): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553913.686:9556): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553913.713:9557): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108445 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553913.713:9557): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="70" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553913.713:9557): cwd="/"
+type=PATH msg=audit(1746553913.713:9557): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553913.713:9557): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553913.713:9557): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003730002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746553913.730:9558): arch=c000003e syscall=59 success=yes exit=0 a0=6346b0b32c30 a1=6346b0b2f810 a2=6346b0b294b0 a3=6346b0b2af90 items=2 ppid=1 pid=108445 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="fwupd" exe="/usr/libexec/fwupd/fwupd" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=BPRM_FCAPS msg=audit(1746553913.730:9558): fver=0 fp=0 fi=0 fe=0 old_pp=000001ffffffffff old_pi=0 old_pe=000001ffffffffff old_pa=0 pp=000001fffffeffff pi=0 pe=000001fffffeffff pa=0 frootid=0
+type=EXECVE msg=audit(1746553913.730:9558): argc=1 a0="/usr/libexec/fwupd/fwupd"
+type=CWD msg=audit(1746553913.730:9558): cwd="/"
+type=PATH msg=audit(1746553913.730:9558): item=0 name="/usr/libexec/fwupd/fwupd" inode=80793 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553913.730:9558): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553913.730:9558): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003730002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SERVICE_START msg=audit(1746553913.813:9559): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=fwupd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+```
+```type=SERVICE_START msg=audit(1746553913.825:9560): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553913.825:9561): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SYSCALL msg=audit(1746553973.668:9562): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108454 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553973.668:9562): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746553973.668:9562): cwd="/"
+type=PATH msg=audit(1746553973.668:9562): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553973.668:9562): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+```
+```type=PROCTITLE msg=audit(1746553973.668:9562): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=SYSCALL msg=audit(1746553973.678:9563): arch=c000003e syscall=59 success=yes exit=0 a0=555a4707a030 a1=555a4707a130 a2=555a470799b0 a3=555a4707a990 items=2 ppid=1 pid=108454 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746553973.678:9563): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746553973.678:9563): cwd="/"
+type=PATH msg=audit(1746553973.678:9563): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746553973.678:9563): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746553973.678:9563): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SERVICE_START msg=audit(1746553978.581:9564): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=SERVICE_STOP msg=audit(1746553978.581:9565): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='unit=audit-discord comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'UID="root" AUID="unset"
+type=USER_ACCT msg=audit(1746554101.486:9566): pid=108456 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=CRED_ACQ msg=audit(1746554101.487:9567): pid=108456 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="unset"
+type=LOGIN msg=audit(1746554101.487:9568): pid=108456 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=272 res=1UID="root" OLD-AUID="unset" AUID="root"
+type=SYSCALL msg=audit(1746554101.487:9568): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7fff01166650 a2=1 a3=0 items=0 ppid=577 pid=108456 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=272 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)ARCH=x86_64 SYSCALL=write AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=PROCTITLE msg=audit(1746554101.487:9568): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+```
+```type=USER_START msg=audit(1746554101.488:9569): pid=108456 uid=0 auid=0 ses=272 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=CRED_REFR msg=audit(1746554101.489:9570): pid=108457 uid=0 auid=0 ses=272 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746554101.489:9571): arch=c000003e syscall=59 success=yes exit=0 a0=59f0097026a6 a1=7fff01166700 a2=59f009702730 a3=59f0097026a6 items=2 ppid=108456 pid=108457 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=272 comm="sh" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746554101.489:9571): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1746554101.489:9571): cwd="/root"
+type=PATH msg=audit(1746554101.489:9571): item=0 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746554101.489:9571): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746554101.489:9571): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+```
+```type=SYSCALL msg=audit(1746554101.491:9572): arch=c000003e syscall=59 success=yes exit=0 a0=5efc22a2f538 a1=5efc22a2f4e0 a2=5efc22a2f500 a3=8 items=3 ppid=108457 pid=108458 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=272 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="root" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746554101.491:9572): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1746554101.491:9572): cwd="/root"
+type=PATH msg=audit(1746554101.491:9572): item=0 name="/usr/lib/sysstat/debian-sa1" inode=20600 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746554101.491:9572): item=1 name="/bin/sh" inode=1787 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746554101.491:9572): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746554101.491:9572): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1746554101.492:9573): pid=108456 uid=0 auid=0 ses=272 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+```
+```type=USER_END msg=audit(1746554101.492:9574): pid=108456 uid=0 auid=0 ses=272 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'UID="root" AUID="root"
+type=SYSCALL msg=audit(1746554153.667:9575): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc5909b490 a1=7ffc5909b4b0 a2=7ffc5909bfa8 a3=8 items=2 ppid=1 pid=108459 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746554153.667:9575): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="66" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=CWD msg=audit(1746554153.667:9575): cwd="/"
+type=PATH msg=audit(1746554153.667:9575): item=0 name="/proc/self/fd/9" inode=4910 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746554153.667:9575): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746554153.667:9575): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```
+```type=SYSCALL msg=audit(1746554153.676:9576): arch=c000003e syscall=59 success=yes exit=0 a0=5ad862c29030 a1=5ad862c29130 a2=5ad862c289b0 a3=5ad862c29990 items=2 ppid=1 pid=108459 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="python3" exe="/usr/bin/python3.12" subj=unconfined key="command-execution"ARCH=x86_64 SYSCALL=execve AUID="unset" UID="root" GID="root" EUID="root" SUID="root" FSUID="root" EGID="root" SGID="root" FSGID="root"
+type=EXECVE msg=audit(1746554153.676:9576): argc=2 a0="/usr/bin/python3" a1="/usr/local/bin/audit_to_discord.py"
+type=CWD msg=audit(1746554153.676:9576): cwd="/"
+type=PATH msg=audit(1746554153.676:9576): item=0 name="/usr/bin/python3" inode=7869 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PATH msg=audit(1746554153.676:9576): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=33672 dev=ca:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="root"
+type=PROCTITLE msg=audit(1746554153.676:9576): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003636002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+```

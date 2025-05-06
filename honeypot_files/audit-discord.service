@@ -1,0 +1,7 @@
+[Unit]
+Description=Send audit logs to Discord
+Wants=audit-discord.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/bin/audit_to_discord.py
