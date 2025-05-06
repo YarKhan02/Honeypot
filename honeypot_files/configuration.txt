@@ -1,3 +1,12 @@
+step- 0
+// auditd records every command and system activity
+sudo apt update
+sudo apt install auditd audispd-plugins
+sudo systemctl enable --now auditd
+// logs stored in
+/var/log/audit/audit.log
+
+
 step - 1
 /usr/local/bin/audit_to_discord.py
 sudo chmod +x /usr/local/bin/audit_to_discord.py
