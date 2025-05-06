@@ -7,11 +7,14 @@ import os
 load_dotenv()
 
 token = os.environ.get("DISCORD_TOKEN")
+channel_id = os.environ.get("DISCORD_CHANNEL_ID")
 if not token:
     raise ValueError("DISCORD_TOKEN is not set in the environment or .env file.")
 
 TOKEN = token
-CHANNEL_ID = 1368831095059120161
+CHANNEL_ID = channel_id
+if not channel_id:
+    raise ValueError("DISCORD_CHANNEL_ID is not set in the environment or .env file.")
 
 intents = discord.Intents.default()
 intents.messages = True
